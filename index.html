@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+    <h1>Sistema para nacionalidade.</h1>
+     <p>Em qual país você nasceu?</p><input type="text" name="pais" id="pais" placeholder="Informe seu país de origem.">
+     <input type="button" value="Verificar" onclick="ondenasceu()">
+     <div id="resultado"></div>
+    
+    <script>
+        function ondenasceu(){
+        let pais = document.getElementById('pais').value
+        let res = document.getElementById("resultado")
+        res.innerHTML = `Você nasceu no ${pais}.`
+            if (pais.toLowerCase() == 'brasil'){
+                 res.innerHTML += ` Você é brasileiro!`  
+            }         
+            else{
+                res.innerHTML = `Você nasceu no(a) ${pais}. Você é estrangeiro.` 
+            }
+        }
+    </script>
+    </section>
+</body>
+</html>
